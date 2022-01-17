@@ -1,6 +1,6 @@
 from re import search
 from src.keystore import store
-from prometheus_client import Counter, Histogram, generate_latest
+from prometheus_client import Counter, Histogram, generate_latest, make_wsgi_app
 
 ks = store.KeyStore()
 keyCounter = Counter('keys', 'Total number of keys in DB')
@@ -11,4 +11,4 @@ getLatencyHistogram = latencyHistogram.labels('/get')
 searchLatencyHistogram = latencyHistogram.labels('/search')
 
 def generate():
-  return generate_latest()
+  return make_wsgi_app()

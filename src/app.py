@@ -5,6 +5,7 @@ from src.endpoints.get import bp_get
 from src.endpoints.set import bp_set
 from src.endpoints.search import bp_search
 from src.settings import generate
+# from werkzeug.middleware.dispatcher import DispatcherMiddleware
 
 ks = store.KeyStore()
 
@@ -16,5 +17,7 @@ app.register_blueprint(bp_search)
 
 @app.route('/metrics')
 def metrics():
-  # print(generate().decode(encoding='utf-8'))
   return generate()
+# app.wsgi_app = DispatcherMiddleware(app.wsgi_app, {
+#     '/metrics': generate()
+# })
