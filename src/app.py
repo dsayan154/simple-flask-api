@@ -17,4 +17,4 @@ app.register_blueprint(bp_search)
 @app.route('/metrics')
 def metrics():
   # print(generate().decode(encoding='utf-8'))
-  return generate().decode(encoding='utf-8').splitlines()
+  return generate()
