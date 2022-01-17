@@ -1,0 +1,5 @@
+flask
+uswgi
+pytest
+requests
+prometheus_client
