@@ -13,8 +13,7 @@ docker build -t dsayan154/imple-api:v0.1 .
 docker push dsayan154/simple-api:v0.1
 ```
 
-### Deploy the k8s manifests
+### Manifests directory
 ```
-cd manifests
-kubectl apply -f .
-``` 
+simple_api/devops/manifests
+```
