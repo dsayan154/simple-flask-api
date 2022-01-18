@@ -6,7 +6,8 @@ metadata:
   namespace: app
 spec:
   rules:
-  - http:
+  - host: app.local
+    http:
       paths:
       - backend:
           service:
