@@ -5,6 +5,7 @@ Endpoints:
 - GET /get/<key> - gets the value of the given key
 - POST /set "{\"xyz-3\": \"xyz3\",\"abc-3\": \"abc3\"}" - sets the value of the new/existing keys
 - GET /search?prefix=x&suffix=3 - filters the keys based on prefix and suffix, returns a list
+- GET /metrics - prometheus metrics
 
 ### Building the application
 ```
